@@ -119,12 +119,26 @@ def user_stats(df):
 
     # Display counts of user types
 
+    print('User Types:')
+    print(df['User Type'].value_counts())
 
     # Display counts of gender
 
+    if 'Gender' in df.columns:
+        print('\nGender Distribution:')
+        print(df['Gender'].value_counts())
+    else:
+        print('\nGender data not available for this city.')
 
     # Display earliest, most recent, and most common year of birth
 
+    if 'Birth Year' in df.columns:
+        print('\nBirth Year Stats:')
+        print('Earliest:', int(df['Birth Year'].min()))
+        print('Most Recent:', int(df['Birth Year'].max()))
+        print('Most Common:', int(df['Birth Year'].mode()[0]))
+    else:
+        print('\nBirth year data not available for this city.')    
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
