@@ -40,3 +40,12 @@ The application processes raw bikeshare data and generates descriptive statistic
 
 This project is based on the Udacity GitHub repository:  
 https://github.com/udacity/pdsnd_github
+
+---
+
+## Requirements
+
+- Python 3.x  
+- Python packages:
+  - `pandas`
+  - `numpy`
